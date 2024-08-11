@@ -1,0 +1,25 @@
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0c843a; /* Dark blue background */
+    color: #fff; /* White text color for contrast */
+    padding: 20px;
+  
+  }
+  
+  .counter-item {
+    text-align: center;
+  }
+  
+  .counter-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  

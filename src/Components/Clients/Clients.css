@@ -1,0 +1,38 @@
+.clients-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000; /* Dark blue background */
+    color: rgb(20, 20, 244);
+  }
+  
+  .clients-heading {
+    font-size: 2rem;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  
+  .clients-grid {
+    display: flex;
+    justify-content: space-between; /* Evenly space out the logos */
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping to maintain a single row */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    padding: 0 20px; /* Padding on the sides to prevent logos from touching the edges */
+  }
+  
+  .client-logo-wrapper {
+    flex: 0 0 auto; /* Prevent logos from shrinking or growing */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  }
+  
+  .client-logo {
+    max-width: 100px; /* Adjust based on your preferred logo size */
+    height: auto;
+    object-fit: contain; /* Ensure logos retain their aspect ratio */
+  }
+  
+  .client-logo-wrapper:hover .client-logo {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  

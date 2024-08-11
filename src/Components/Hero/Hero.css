@@ -1,0 +1,63 @@
+/* Existing CSS */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(8,0,58,0.7), rgba(8,0,58,0.7)), url('../../assets/hero.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    color: white; 
+    text-align: center;
+    max-width: 800px; 
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(20, 20, 244);
+}
+
+.hero-text p {
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+    font-size: 30px;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 48px; /* Smaller font size for tablets */
+        font-weight: 500; /* Slightly lighter font weight */
+    }
+
+    .hero-text p {
+        font-size: 24px; /* Smaller font size for tablets */
+    }
+}
+
+/* Media Queries for Mobile Phones */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 36px; /* Much smaller font size for mobile phones */
+        font-weight: 400; /* Even lighter font weight */
+    }
+
+    .hero-text p {
+        font-size: 18px; /* Smaller font size for mobile phones */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Smaller padding for the button */
+        font-size: 16px; /* Smaller font size for the button */
+    }
+
+    .arrow {
+        font-size: 1.5rem; /* Smaller arrow icon size */
+    }
+}

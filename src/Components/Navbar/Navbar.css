@@ -1,0 +1,148 @@
+/* General Navigation Styles */
+nav {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: 0.3s ease-in-out;
+}
+
+.scrolled {
+    background: #002f6c; /* Dark blue background when scrolled */
+}
+
+nav img {
+    width: 70px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #28a745;
+}
+
+.menu-toggle {
+    display: none; /* Hide hamburger menu by default */
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #28a745; /* Green underline color */
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Styles */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #002f6c; /* Dark blue background */
+    width: 250px; /* Adjust width as needed */
+    height: 100%;
+    transform: translateX(100%); /* Start off-screen */
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px; /* Adjust if needed to align items below the top bar */
+}
+
+.nav-links.open {
+    transform: translateX(0); /* Slide in */
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.nav-links li a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+}
+
+.nav-links li a:hover {
+    background: #003366; /* Darker blue for hover effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide the default menu links on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: none; /* Hide side menu on desktop */
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        width: 200px; /* Adjust logo size for smaller screens */
+    }
+
+    .menu-toggle {
+        font-size: 1.5rem; /* Smaller icon size for very small screens */
+    }
+}

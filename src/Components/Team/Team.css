@@ -1,0 +1,52 @@
+.team-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for contrast */
+  }
+  
+  .team-heading {
+    font-size: 2rem;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    color: rgb(20, 20, 244);
+  }
+  
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-between; /* Evenly space out the cards */
+    gap: 20px;
+  }
+  
+  .team-card {
+    background: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* Adjust to fit 4 cards per row */
+    transition: transform 0.3s; /* Smooth zoom effect */
+  }
+  
+  .team-image {
+    width: 120px; /* Adjust size as needed */
+    height: 160px; /* Passport-sized dimensions */
+    object-fit: cover; /* Ensure image covers the area */
+    margin-bottom: 10px;
+  }
+  
+  .team-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .team-title {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
